@@ -1,0 +1,22 @@
+﻿@using System.Web.Mvc.Html
+@model Domain.Cust.CView
+
+<p>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(m => m.Number) 
+        @Html.TextBoxFor(m => m.Number, new {@Value = Model.Number}) <br />
+        @Html.LabelFor(m => m.Name) 
+        @Html.TextBoxFor(m => m.Name, new {@Value = Model.Name}) <br />
+        @Html.LabelFor(m => m.Address) 
+        @Html.TextBoxFor(m =>m.Address, new {@Value = Model.Address}) <br />
+        @Html.LabelFor(m => m.Mobile) 
+        @Html.TextBoxFor(m => m.Mobile, new { @Value = Model.Mobile}) <br />
+        <input type="submit" name="button" value="Add"/>
+        <input type="submit" name="button" value="Chg"/>
+        <input type="submit" name="button" value="View"/>
+        <input type="submit" name="button" value="Del"/>
+    }
+        @Html.LabelFor(m => m.Message)
+        @Html.DisplayTextFor(m => m.Message)
+</p>
